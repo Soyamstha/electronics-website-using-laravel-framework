@@ -50,4 +50,8 @@ class frontendcontroller extends Controller
     {
         return view('login');
     }
+    function signup()
+    {
+        return view('signup');
+    }
 }

@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\backendcontroller;
 use App\Http\Controllers\frontendcontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -14,3 +16,7 @@ Route::get('/shop_left_sidebar',[frontendcontroller::class,'shop_left_sidebar'])
 Route::get('/shop_single',[frontendcontroller::class,'shop_single'])->name('shop_single');
 Route::get('/shop',[frontendcontroller::class,'shop'])->name('shop');
 Route::get('/login',[frontendcontroller::class,'login'])->name('login');
+Route::get('/signup',[frontendcontroller::class,'signup'])->name('signup');
+
+Route::POST('/login_process',[backendcontroller::class,'login_process'])->name('login_process');
+Route::POST('/register',[backendcontroller::class,'register'])->name('register');

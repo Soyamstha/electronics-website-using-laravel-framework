@@ -157,12 +157,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="thm-btn" href="{{Route('login')}}">
-                                <span class="btn-wrap">
-                                    <span>Login / Sign Up</span>
-                                    <span>Login / Sign Up</span>
-                                </span>
-                            </a>
+                                <a class="btn btn-primary" href="{{Route('login')}}" role="button">login/signin</a>
                         </div>
                     </div>
                 </div>
