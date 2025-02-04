@@ -157,7 +157,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                                <a class="btn btn-primary" href="{{Route('login')}}" role="button">login/signin</a>
+                                <a class="btn btn-warning" href="{{Route('login')}}" role="button">login/signin</a>
                         </div>
                     </div>
                 </div>
