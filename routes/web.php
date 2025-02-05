@@ -17,6 +17,7 @@ Route::get('/shop_single',[frontendcontroller::class,'shop_single'])->name('shop
 Route::get('/shop',[frontendcontroller::class,'shop'])->name('shop');
 Route::get('/login',[frontendcontroller::class,'login'])->name('login');
 Route::get('/signup',[frontendcontroller::class,'signup'])->name('signup');
+Route::get('/admin',[frontendcontroller::class,'admin'])->name('admin');
 
 Route::POST('/login_process',[backendcontroller::class,'login_process'])->name('login_process');
 Route::POST('/register',[backendcontroller::class,'register'])->name('register');

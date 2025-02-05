@@ -54,4 +54,8 @@ class frontendcontroller extends Controller
     {
         return view('signup');
     }
+    function admin()
+    {
+        return view('admin');
+    }
 }
