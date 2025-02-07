@@ -103,8 +103,6 @@
                                 <li><a href="#!" class="lang-btn">USD <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
                                         <li><a href="#">USD</a></li>
-                                        <li><a href="#">BDT</a></li>
-                                        <li><a href="#">EUR</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -114,8 +112,6 @@
                                 <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="">English <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
                                         <li><a href="#">English</a></li>
-                                        <li><a href="#">Arabic</a></li>
-                                        <li><a href="#">Bangla</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -159,7 +155,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="btn btn-warning" href="{{Route('admin_logout')}}" role="button">Logout</a>
+                            <a class="btn btn-warning" href="" role="button">Logout</a>
                         </div>
 
                     </div>
@@ -292,7 +288,50 @@
         <!-- slide-bar end -->
     </div>
     <div>
-        <h1> welcome to admin access</h1>
+        <form action="{{Route('add_product')}}" method="POST">
+            @csrf
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" name="name" class="form-control"  aria-describedby="emailHelp" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+              <label >Product Detail </label>
+              <input type="text" class="form-control" name="detail" id="exampleInputPassword1" placeholder="Enter product detail">
+            </div>
+            <div class="form-group">
+                <label >Product Cost Price </label>
+                <input type="text" class="form-control" name="cost_price"id="exampleInputPassword1" placeholder="Enter product cost price">
+            </div>
+            <div class="form-group">
+                <label >Product Sell Price </label>
+                <input type="text" class="form-control" name="sell_price" id="exampleInputPassword1" placeholder="Enter product sell price">
+            </div>
+            <div class="form-group">
+                <label >Product Quantity </label>
+                <input type="text" class="form-control" name="quantity" id="exampleInputPassword1" placeholder="Enter product quantity">
+            </div>
+            <div class="form-group">
+                <label >Product Catagory </label>
+                <input type="text" class="form-control" name="catagory" id="exampleInputPassword1" placeholder="Enter product catagory">
+            </div>
+            <div class="form-group">
+                <label >Product Type</label>
+                <input type="text" class="form-control" name="type" id="exampleInputPassword1" placeholder="Enter product type">
+            </div>
+            <div class="form-group">
+                <label >Product Image1</label>
+                <input type="text" class="form-control" name="image1" id="exampleInputPassword1" placeholder="Enter product image url">
+            </div>
+            <div class="form-group">
+                <label >Product Image2</label>
+                <input type="text" class="form-control" name="image2" id="exampleInputPassword1" placeholder="Enter product image url">
+            </div>
+            <div class="form-group">
+                <label >Product Image3</label>
+                <input type="text" class="form-control" name="image3" id="exampleInputPassword1" placeholder="Enter product image url">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
     </div>
 <!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}

@@ -159,7 +159,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="btn btn-warning" href="{{Route('admin_logout')}}" role="button">Logout</a>
+                            <a class="btn btn-warning" href="{{Route('login')}}" role="button">Logout</a>
                         </div>
 
                     </div>
@@ -291,8 +291,48 @@
         <div class="body-overlay"></div>
         <!-- slide-bar end -->
     </div>
+    <!-- main-content end -->
     <div>
-        <h1> welcome to admin access</h1>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">product name</th>
+                <th scope="col">detail</th>
+                <th scope="col">cost price</th>
+                <th scope="col">sell price</th>
+                <th scope="col">quantity</th>
+                <th scope="col">catagory</th>
+                <th scope="col">type</th>
+                <th scope="col">image1</th>
+                <th scope="col">image2</th>
+                <th scope="col">image3</th>
+                <th scope="col">action</th>
+
+              </tr>
+            </thead>
+            <tbody>
+                @foreach($data as $data1)
+              <tr>
+                <td>{{$data1->id}}</td>
+                <td>{{$data1->name}}</td>
+                <td>{{$data1->description}}</td>
+                <td>{{$data1->price}}</td>
+                <td>{{$data1->sellprice}}</td>
+                <td>{{$data1->quantity}}</td>
+                <td>{{$data1->catagory}}</td>
+                <td>{{$data1->type}}</td>
+                <td>{{$data1->image}}</td>
+                <td>{{$data1->image1}}</td>
+                <td>{{$data1->image2}}</td>
+                <td>
+                    <a href="{{Route('edit',$data1->id)}}" class="btn btn-success">edit</a>
+                    <a href="{{Route('delete',$data1->id)}}" class="btn btn-danger">delete</a>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
     </div>
 <!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}

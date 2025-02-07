@@ -18,6 +18,15 @@ Route::get('/shop',[frontendcontroller::class,'shop'])->name('shop');
 Route::get('/login',[frontendcontroller::class,'login'])->name('login');
 Route::get('/signup',[frontendcontroller::class,'signup'])->name('signup');
 Route::get('/admin',[frontendcontroller::class,'admin'])->name('admin');
+Route::get('/admin_access',[frontendcontroller::class,'admin_access'])->name('admin_access');
+Route::get('/add_product',[frontendcontroller::class,'add_product'])->name('add_product');
+Route::get('/view',[frontendcontroller::class,'view'])->name('view');
+Route::get('/edit/{id}',[frontendcontroller::class,'edit'])->name('edit');
+Route::get('/delete/{id}',[frontendcontroller::class,'delete'])->name('delete');
 
 Route::POST('/login_process',[backendcontroller::class,'login_process'])->name('login_process');
 Route::POST('/register',[backendcontroller::class,'register'])->name('register');
+Route::POST('/admin_login',[backendcontroller::class,'admin_login'])->name('admin_login');
+Route::POST('/add_product',[backendcontroller::class,'add_product'])->name('add_product');
+Route::POST('/admin_logout',[backendcontroller::class,'admin_logout'])->name('admin_logout');
+Route::Put('/update/{id}',[frontendcontroller::class,'update'])->name('update');

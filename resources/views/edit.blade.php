@@ -159,7 +159,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="btn btn-warning" href="{{Route('admin_logout')}}" role="button">Logout</a>
+                            <a class="btn btn-warning" href="{{Route('login')}}" role="button">Logout</a>
                         </div>
 
                     </div>
@@ -291,8 +291,56 @@
         <div class="body-overlay"></div>
         <!-- slide-bar end -->
     </div>
+    <!-- main-content end -->
     <div>
-        <h1> welcome to admin access</h1>
+        <h2>edit product</h2>
+    </div>
+    <div>
+        <form action="{{url('update/'.$products->id)}}" method="POST">
+            @csrf
+            @method('put')
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" name="name" class="form-control" value="{{$products->name}}" aria-describedby="emailHelp" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+              <label >Product Detail </label>
+              <input type="text" class="form-control" name="detail" value="{{$products->description}}"placeholder="Enter product detail">
+            </div>
+            <div class="form-group">
+                <label >Product Cost Price </label>
+                <input type="text" class="form-control" name="cost_price" value="{{$products->price}}"  placeholder="Enter product cost price">
+            </div>
+            <div class="form-group">
+                <label >Product Sell Price </label>
+                <input type="text" class="form-control" name="sell_price" value="{{$products->sellprice}}"  placeholder="Enter product sell price">
+            </div>
+            <div class="form-group">
+                <label >Product Quantity </label>
+                <input type="text" class="form-control" name="quantity" value="{{$products->quantity}}"  placeholder="Enter product quantity">
+            </div>
+            <div class="form-group">
+                <label >Product Catagory </label>
+                <input type="text" class="form-control" name="catagory" value="{{$products->catagory}} " placeholder="Enter product catagory">
+            </div>
+            <div class="form-group">
+                <label >Product Type</label>
+                <input type="text" class="form-control" name="type" value="{{$products->type}} " placeholder="Enter product type">
+            </div>
+            <div class="form-group">
+                <label >Product Image1</label>
+                <input type="text" class="form-control" name="image1" value="{{$products->image}}"  placeholder="Enter product image url">
+            </div>
+            <div class="form-group">
+                <label >Product Image2</label>
+                <input type="text" class="form-control" name="image2" value="{{$products->image1}}"  placeholder="Enter product image url">
+            </div>
+            <div class="form-group">
+                <label >Product Image3</label>
+                <input type="text" class="form-control" name="image3" value="{{$products->image2}}" placeholder="Enter product image url">
+            </div>
+            <button type="submit" class="btn btn-primary">edit</button>
+          </form>
     </div>
 <!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}
