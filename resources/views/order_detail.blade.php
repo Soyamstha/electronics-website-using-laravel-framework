@@ -24,19 +24,17 @@
     <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 </head>
-
 <body>
-
     <div class="body_wrap">
 
-        <!-- preloder start  -->
+        {{-- <!-- preloder start  -->
         <div class="preloder_part">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
             </div>
         </div>
-        <!-- preloder end  -->
+        <!-- preloder end  --> --}}
 
         <!-- back to top start -->
         <div class="progress-wrap">
@@ -80,25 +78,25 @@
                         </a>
                     </div>
                     <form class="header__search-box" action="#">
-                        <div class="select-box">
-                            <select id="category" name="category">
-                                <option value="">All Categories</option>
-                                <option value="4">Summer collections</option>
-                                <option value="5">Breakfast & Dairy</option>
-                                <option value="6">Beverage & Drinks</option>
-                                <option value="7">Cocolate Box</option>
-                                <option value="8">Dried Food Corner</option>
-                                <option value="9">Frozen Foods</option>
-                                <option value="10">Baby Food Corner</option>
-                                <option value="11">Milk & Juices</option>
-                                <option value="12">Organic & Snacks</option>
-                            </select>
-                        </div>
-                        <input type="text" name="search" id="search" placeholder="Search For Products"
-                            required />
-                        <button type="submit"><i class="far fa-search"></i>
-                        </button>
-                    </form>
+						<div class="select-box">
+							<select id="category" name="category">
+								<option value="">All Categories</option>
+								<option value="4">Summer collections</option>
+								<option value="5">Breakfast & Dairy</option>
+								<option value="6">Beverage & Drinks</option>
+								<option value="7">Cocolate Box</option>
+								<option value="8">Dried Food Corner</option>
+								<option value="9">Frozen Foods</option>
+								<option value="10">Baby Food Corner</option>
+								<option value="11">Milk & Juices</option>
+								<option value="12">Organic & Snacks</option>
+							</select>
+						</div>
+						<input type="text" name="search" id="search" placeholder="Search For Products"
+							required />
+						<button type="submit"><i class="far fa-search"></i>
+						</button>
+					</form>
                     <div class="header__lang ul_li">
                         <div class="header__language mr-15">
                             <ul>
@@ -161,12 +159,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="thm-btn" href="account.html">
-                                <span class="btn-wrap">
-                                    <span>Login / Sign Up</span>
-                                    <span>Login / Sign Up</span>
-                                </span>
-                            </a>
+                            <a class="btn btn-warning" href="{{Route('admin_logout')}}" role="button">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -174,8 +167,8 @@
         </header>
         <!-- header end -->
 
-        <!-- slide-bar start -->
-        <aside class="slide-bar">
+         <!-- slide-bar start -->
+         <aside class="slide-bar">
             <div class="close-mobile-menu">
                 <a href="javascript:void(0);"><i class="fal fa-times"></i></a>
             </div>
@@ -264,229 +257,65 @@
                     </form>
                 </div>
                 <ul id="mobile-menu-active">
-                    <li class="dropdown"><a href="index.html">Home</a>
+                    <li class="dropdown"><a href="{{Route('admin_access')}}">Home</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Home One</a></li>
-                            <li><a href="home-2.html">Home Two</a></li>
-                            <li><a href="home-3.html">Home Three</a></li>
+                            <li><a href="{{Route('admin_access')}}">Home </a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Shop</a>
+                        <a href="#">Admin access</a>
                         <ul class="sub-menu">
-                            <li><a href="shop.html">Shop Default</a></li>
-                            <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="cart.html">Shop Cart</a></li>
-                            <li><a href="checkout.html">Shop Checkout</a></li>
-                            <li><a href="account.html">Account</a></li>
+                            <li><a href="{{Route('add_product')}}">Add product</a></li>
+                            <li><a href="{{Route('view')}}">view product</a></li>
                         </ul>
                     </li>
-                    <li><a href="shop.html">Accesories</a></li>
                     <li class="dropdown">
                         <a href="#!">Blog</a>
                         <ul class="sub-menu">
-                            <li><a href="news.html">Blog</a></li>
-                            <li><a href="news-single.html">Blog Details</a></li>
+                            <li><a href="{{Route('news')}}">Blog</a></li>
+                            <li><a href="{{Route('news_single')}}">Blog Details</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#!">Pages</a>
                         <ul class="submenu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="about.html">Account</a></li>
-                            <li><a href="404.html">404</a></li>
+                            <li><a href="{{Route('about')}}">About Us</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{Route('contact')}}">Contact</a></li>
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
         </aside>
         <div class="body-overlay"></div>
         <!-- slide-bar end -->
-
-        <main>
-
-            <!-- breadcrumb start -->
-            <section class="breadcrumb-area">
-                <div class="container">
-                    <div class="radios-breadcrumb breadcrumbs">
-                        <ul class="list-unstyled d-flex align-items-center">
-                            <li class="radiosbcrumb-item radiosbcrumb-begin">
-                                <a href="index.html"><span>Home</span></a>
-                            </li>
-                            <li class="radiosbcrumb-item radiosbcrumb-end">
-                                <span>Cart</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- breadcrumb end -->
-
-            <!-- start cart-section -->
-            <section class="cart-section woocommerce-cart pb-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-xs-12">
-                            <div class="woocommerce">
-                                    <table class="shop_table shop_table_responsive cart">
-                                        <thead>
-                                            <tr>
-                                                <th class="product-thumbnail">&nbsp;</th>
-                                                <th class="product-name">Product</th>
-                                                <th class="product-price">Price</th>
-                                                <th class="product-quantity">Quantity</th>
-                                                <th class="product-subtotal">Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @php
-                                            $total = 0;
-                                            @endphp
-                                            @if (Session::has('cart'))
-                                            {
-                                                @foreach (Session::get('cart') as $item)
-                                                <tr>
-                                                    <td><img src="{{$item['image']}}"></td>
-                                                    <td class="product-name">{{$item['name']}}</td>
-                                                    <td class="product-price">RS {{$item['price']}}</td>
-                                                    <td class="product-quantity">
-                                                        <form action="{{route('add_quantity')}}" method="POST">
-                                                            @csrf
-                                                            <input type="hidden" name="id" value="{{$item['id']}}">
-                                                            <input type="number" name="quantity" value="{{$item['quantity']}}">
-                                                            <button type="submit" class="btn btn-primary">edit</button>
-                                                        </form>
-                                                        <form action="{{route('remove_item')}}" method="POST">
-                                                            @csrf
-                                                            <input type="hidden" name="id" value="{{$item['id']}}">
-                                                            <button type="submit" class="btn btn-primary">delete</button>
-                                                        </form>
-                                                    </td>
-                                                    <td class="product-subtotal">RS {{$item['price']*$item['quantity']}}</td>
-                                                </tr>
-                                                @php
-                                                    $total=$total+$item['quantity']*$item['price'];
-                                                @endphp
-                                                @endforeach
-                                            }
-                                            @endif
-                                        </tbody>
-                                    </table>
-
-                                <div class="cart-collaterals">
-                                    <div class="cart_totals calculated_shipping">
-                                        <h2>Cart Totals</h2>
-                                        <table class="shop_table shop_table_responsive">
-                                            <tr class="order-total">
-                                                <th>Total</th>
-                                                <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">RS </span>{{$total}}</span></strong> </td>
-                                            </tr>
-                                        </table>
-
-                                        <div class="wc-proceed-to-checkout">
-                                            <form action="{{route("checkout")}}" method="GET">
-                                                <button type="submit" class="btn btn-primary">checkout</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- end cart-section -->
-
-        </main>
-
-        <!-- footer start -->
-        <footer class="footer" data-background="assets/img/bg/footer_bg.jpg">
-            <div class="container">
-                <div class="footer__main pt-90 pb-90">
-                    <div class="row mt-none-40">
-                        <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <div class="footer__logo mb-20">
-                                <a href="index.html"><img src="assets/img/logo/logo.svg" alt=""></a>
-                            </div>
-                            <p>4517 Washington Ave. Manchester, Kentucky 39495 ashington Ave. Manchester,</p>
-                            <ul class="footer__info mt-30">
-                                <li><i class="far fa-map-marker-alt"></i>254 Lillian Blvd, Holbrook</li>
-                                <li><i class="fas fa-phone"></i>1-800-654-3210</li>
-                            </ul>
-                            <div class="apps-img mt-15 ul_li">
-                                <div class="app mt-15">
-                                    <a href="#!"><img src="assets/img/icon/google_play.png" alt=""></a>
-                                </div>
-                                <div class="app mt-15">
-                                    <a href="#!"><img src="assets/img/icon/app_store.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <h2 class="title">Find It Fast</h2>
-                            <ul class="quick-links">
-                                <li><a href="#!">Laptops & Computers</a></li>
-                                <li><a href="#!">Cameras & Photography</a></li>
-                                <li><a href="#!">Smart Phones & Tablets</a></li>
-                                <li><a href="#!">Video Games & Consoles</a></li>
-                                <li><a href="#!">TV & Audio</a></li>
-                                <li><a href="#!">Gadgets</a></li>
-                                <li><a href="#!">Waterproof Headphones</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <h2 class="title">Quick Links</h2>
-                            <ul class="quick-links">
-                                <li><a href="#!">Your Account</a></li>
-                                <li><a href="#!">Returns & Exchanges</a></li>
-                                <li><a href="#!">Return Center</a></li>
-                                <li><a href="#!">Purchase Hisotry</a></li>
-                                <li><a href="#!">App Download</a></li>
-                                <li><a href="#!">Latest News Blog</a></li>
-                                <li><a href="#!">Shipping & Delivery</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <h2 class="title">Service us</h2>
-                            <ul class="category">
-                                <li><a href="#!">Support Center</a></li>
-                                <li><a href="#!">Term & Conditions</a></li>
-                                <li><a href="#!">Shipping</a></li>
-                                <li><a href="#!">Privacy Policy</a></li>
-                                <li><a href="#!">Help</a></li>
-                                <li><a href="#!">Products Return</a></li>
-                                <li><a href="#!">FAQS</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom ul_li_center">
-                    <div class="footer__copyright mt-15">
-                        &copy; 2022 <a href="#!">Themexriver</a> . All Rights Reserved.
-                    </div>
-                    <div class="footer__social mt-15">
-                        <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#!"><i class="fab fa-twitter"></i></a>
-                        <a href="#!"><i class="fab fa-instagram"></i></a>
-                        <a href="#!"><i class="fab fa-youtube"></i></a>
-                        <a href="#!"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                    <div class="payment_method mt-15">
-                        <img src="assets/img/bg/payment_method.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer end -->
-
-
     </div>
-
-    <!-- jquery include -->
+    <div>
+        <h1> welcome to admin access</h1>
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">image</th>
+                <th scope="col">product name</th>
+                <th scope="col">quantity</th>
+                <th scope="col">price</th>
+              </tr>
+            </thead>
+            <tbody>
+                @foreach($order_items as $item)
+              <tr>
+                <td><img src="{{$item->product_image}}" width="100" height="100"></td>
+                <td>{{$item->product_name}}</td>
+                <td>{{$item->product_quantity}}</td>
+                <td>{{$item->product_price}}</td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+    </div>
+<!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}
     <script src="{{ asset("assets/js/jquery-3.5.1.min.js") }}"></script>
     <script src="{{ asset("assets/js/bootstrap.bundle.min.js") }}"></script>
@@ -503,5 +332,4 @@
     <script src="{{ asset("assets/js/metisMenu.min.js") }}"></script>
     <script src="{{ asset("assets/js/main.js") }}"></script>
 </body>
-
 </html>

@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\product;
+use App\Models\order;
+use App\Models\orderitem;
 class frontendcontroller extends Controller
 {
     function index()
     {
-        return view('index');
+        $products = product::all();
+        return view('index',compact('products'));
     }
     function about()
     {
@@ -38,13 +41,15 @@ class frontendcontroller extends Controller
     {
         return view('shop_left_sidebar');
     }
-    function shop_single()
+    function shop_single($id)
     {
-        return view('shop_single');
+        $products = product::find($id);
+        return view('shop_single', ['products' => $products]);
     }
     function shop()
     {
-        return view('shop');
+        $products = product::all();
+        return view('shop',compact('products'));
     }
     function login()
     {
@@ -60,7 +65,8 @@ class frontendcontroller extends Controller
     }
     function admin_access()
     {
-        return view('admin_access');
+        $orders=order::all();
+        return view('admin_access',compact('orders'));
     }
     function add_product()
     {
@@ -75,6 +81,11 @@ class frontendcontroller extends Controller
     {
         $products=product::find($id);
         return view('edit',compact('products'));
+    }
+    function order_detail($id)
+    {
+        $order_items=orderitem::where("order_id",$id)->get();
+        return view('order_detail',compact('order_items'));
     }
     function update(Request $request,$id)
     {

@@ -161,7 +161,6 @@
                         <div class="login-sign-btn">
                             <a class="btn btn-warning" href="{{Route('admin_logout')}}" role="button">Logout</a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -293,6 +292,46 @@
     </div>
     <div>
         <h1> welcome to admin access</h1>
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">email</th>
+                <th scope="col">phone no</th>
+                <th scope="col">address1</th>
+                <th scope="col">address2</th>
+                <th scope="col">city</th>
+                <th scope="col">status</th>
+                <th scope="col">cost</th>
+                <th scope="col">action</th>
+              </tr>
+            </thead>
+            <tbody>
+                @foreach($orders as $data)
+              <tr>
+                <td>{{$data->id}}</td>
+                <td>
+                    <a href="{{route('order_detail',$data->id)}}">{{$data->first_name}}</a>
+                </td>
+                <td>{{$data->last_name}}</td>
+                <td>{{$data->email}}</td>
+                <td>{{$data->phone}}</td>
+                <td>{{$data->address}}</td>
+                <td>{{$data->address2}}</td>
+                <td>{{$data->city}}</td>
+                <td>{{$data->status}}</td>
+                <td>{{$data->cost}}</td>
+                <td>
+                    <a href="" class="btn btn-success">complete</a>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
     </div>
 <!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}

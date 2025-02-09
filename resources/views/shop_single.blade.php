@@ -11,18 +11,18 @@
 
     <title>Radios - Electronics Store WooCommerce Template</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon"/>
+    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" type="images/x-icon"/>
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/uikit.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/uikit.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 </head>
 
 <body>
@@ -317,7 +317,7 @@
                                 <a href="index.html"><span>Home</span></a>
                             </li>
                             <li class="radiosbcrumb-item radiosbcrumb-end">
-                                <span>Shop</span>
+                                <span>Shop Single</span>
                             </li>
                         </ul>
                     </div>
@@ -325,260 +325,101 @@
             </section>
             <!-- breadcrumb end -->
 
-          <!-- start shop-section -->
-          <section class="shop-section pb-80">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="shop-area clearfix">
-                            <div class="woocommerce-content-wrap">
-                                <div class="woocommerce-toolbar-top">
-                                    <p class="woocommerce-result-count">Showing all product</p>
-                                    <div class="products-sizes">
-                                        <a href="#!" class="grid-4">
-                                            <div class="grid-draw">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
+            <!-- start shop-single-section -->
+            <section class="shop-single-section pb-70">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-single-wrap mb-30">
+                                <div class="product_details_img ">
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                            <div class="pl_thumb">
+                                                <img src="{{$products->image}}" alt="">
                                             </div>
-                                            <div class="grid-draw">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="grid-draw">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </a>
-                                        <a href="#!" class="grid-3 active">
-                                            <div class="grid-draw">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="grid-draw">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="grid-draw">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </a>
-                                        <a href="#!" class="list-view">
-                                            <div class="grid-draw-line">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="grid-draw-line">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="grid-draw-line">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <form class="woocommerce-ordering" method="get">
-                                        <select name="orderby" class="orderby">
-                                            <option value="menu_order" selected='selected'>Default sorting</option>
-                                            <option value="popularity">Sort by popularity</option>
-                                            <option value="rating">Sort by average rating</option>
-                                            <option value="date">Sort by newness</option>
-                                            <option value="price">Sort by price: low to high</option>
-                                            <option value="price-desc">Sort by price: high to low</option>
-                                        </select>
-                                        <input type="hidden" name="post_type" value="product" />
-                                    </form>
-                                </div>
-                                <div class="woocommerce-content-inner">
-                                    <ul class="products three-column clearfix">
-                                        @foreach ($products as $product )
-                                        <li class="product">
-                                            <div class="product-holder">
-                                                <a href="shop-single.html"><img src="{{$product->image}}" alt=""></a>
-                                                <ul class="product__action">
-                                                    <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
-                                                    <li><a href="#!"><i class="far fa-shopping-basket"></i></a></li>
-                                                    <li><a href="#!"><i class="far fa-heart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="product__review ul_li">
-                                                    <ul class="rating-star ul_li mr-10">
-                                                        <li><i class="fas fa-star"></i></li>
-                                                        <li><i class="fas fa-star"></i></li>
-                                                        <li><i class="fas fa-star"></i></li>
-                                                        <li><i class="far fa-star"></i></li>
-                                                        <li><i class="far fa-star"></i></li>
-                                                    </ul>
-                                                    <span>(126) Review</span>
-                                                </div>
-                                                <h2 class="product__title"><a href="{{Route('shop_single',$product->id)}}">{{$product->name}}</a></h2>
-                                                <span class="product__available">Available: <span>{{$product->quantity}}</span></span>
-                                                <div class="product__progress progress color-primary">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <h4 class="product__price">
-                                                @if ($product->sellprice!=null)
-                                                    <span class="new">RS{{$product->sellprice}}</span>
-                                                    <span class="old">RS{{$product->price}}</span></h4>
-                                                @else
-                                                        <span class="new">RS{{$product->price}}</span></h4>
-                                                @endif
-                                                </h4>
-                                                <p class="product-description">RS{{$product->description}}</p>
-                                            </div>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <div class="pagination_wrap pt-20">
-                                    <ul>
-                                        <li><a href="#!"><i class="far fa-angle-double-left"></i></a></li>
-                                        <li><a class="current_page" href="#!">1</a></li>
-                                        <li><a href="#!">2</a></li>
-                                        <li><a href="#!">3</a></li>
-                                        <li><a href="#!"><i class="far fa-angle-double-right"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="shop-sidebar">
-                                <div class="widget">
-                                    <h2 class="widget__title">
-                                        <span>Search</span>
-                                    </h2>
-                                    <form class="widget__search" action="#">
-                                        <input type="text" placeholder="Search...">
-                                        <button><i class="far fa-search"></i></button>
-                                    </form>
-                                </div>
-                                <div class="widget widget_price_filter">
-                                    <h2 class="widget__title">
-                                        <span>Price Filtering</span>
-                                    </h2>
-                                    <div class="filter-price">
-                                        <form>
-                                            <div id="slider-range"></div>
-                                            <p>Price : <input type="text" id="amount"></p>
-                                            <button>filter</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="widget">
-                                    <h2 class="widget__title">
-                                        <span>Color</span>
-                                    </h2>
-                                    <div class="widget__color ul_li">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <div class="widget">
-                                    <h2 class="widget__title">
-                                        <span>Category</span>
-                                    </h2>
-                                   <ul class="widget__category">
-                                        <li><a href="#!">Motorbike parts<i class="far fa-chevron-right"></i></a></li>
-                                        <li><a href="#!">Car parts Name<i class="far fa-chevron-right"></i></a></li>
-                                        <li><a href="#!">Bicycle Parts<i class="far fa-chevron-right"></i></a></li>
-                                        <li><a href="#!">Taxi bike parts<i class="far fa-chevron-right"></i></a></li>
-                                        <li><a href="#!">Double decker bus<i class="far fa-chevron-right"></i></a></li>
-                                        <li><a href="#!">Tractor parts<i class="far fa-chevron-right"></i></a></li>
-                                        <li><a href="#!">Bull Dozer<i class="far fa-chevron-right"></i></a></li>
-                                   </ul>
-                                </div>
-                                <div class="widget">
-                                    <div class="widget__add">
-                                        <div class="content">
-                                            <span>Trending</span>
-                                            <h3>2021 <span>Laptop</span> <br> Collection</h3>
-                                            <a class="thm-btn no-icon" href="#!">
-                                                <span class="btn-wrap">
-                                                    <span>Buy Now</span>
-                                                    <span>Buy Now</span>
-                                                </span>
-                                            </a>
                                         </div>
-                                        <div class="image">
-                                            <img class="add_img" src="assets/img/product/img_177.png" alt="">
-                                            <img class="add_shape" src="assets/img/shape/add_shape.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget">
-                                    <h2 class="widget__title">
-                                        <span>Brands</span>
-                                    </h2>
-                                    <div class="checkbox">
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b1" />
-                                            <label for="b1">Samsung</label>
-                                        </div>
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b2" />
-                                            <label for="b2">Oppo</label>
-                                        </div>
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b3" />
-                                            <label for="b3">hewaui Galaxy</label>
-                                        </div>
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b4" />
-                                            <label for="b4">Ryzen 3600</label>
-                                        </div>
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b5" />
-                                            <label for="b5">intel</label>
-                                        </div>
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b6" />
-                                            <label for="b6">Mobile Handset</label>
-                                        </div>
-                                        <div class="checkbox__item ul_li">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="b7" />
-                                            <label for="b7">Mobile Handset</label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="widget">
-                                    <h2 class="widget__title">
-                                        <span>Tags</span>
-                                    </h2>
-                                    <div class="tagcloud">
-                                        <a href="#!">symphony</a>
-                                        <a href="#!">nokia</a>
-                                        <a href="#!">nokia</a>
-                                        <a href="#!">landing page</a>
-                                        <a href="#!">Alcatel</a>
-                                        <a href="#!">Samsung</a>
-                                        <a href="#!">Oppos</a>
-                                        <a href="#!">Oppos</a>
-                                        <a href="#!">I phone Pro 12</a>
-                                        <a href="#!">poco X3</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end shop-section -->
+
+                        <div class="col-md-6 product-details-col">
+                            <div class="product-details">
+                                <h2>{{$products->name}}</h2>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="price">
+                                    @if ($products->sellprice!=null)
+                                        <span class="new">RS{{$products->sellprice}}</span>
+                                        <span class="old">RS{{$products->price}}</span></h4>
+                                        @else
+                                            <span class="new">RS{{$products->price}}</span></h4>
+                                        @endif
+                                </div>
+                                <div class="thb-product-meta-before mt-20">
+                                    <div class="product_meta">
+                                        <span class="product-share-wrap ul_li">Share:
+                                            <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#!"><i class="fab fa-instagram"></i></a>
+                                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                                            <a href="#!"><i class="fab fa-linkedin "></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="product-option">
+                                    <div class="product-row">
+                                        <form action="{{route('add_to_cart')}}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$products->id}}">
+                                            <input type="hidden" name="image" value="{{$products->image}}">
+                                            <input type="hidden" name="name" value="{{$products->name}}">
+                                            <input type="hidden" name="price" value="{{$products->price}}">
+                                            <input type="hidden" name="sellprice" value="{{$products->sellprice}}">
+                                            <input type="hidden" name="quantity" value="1">
+                                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="single-product-info">
+                                <!-- Nav tabs -->
+                                <div class="tablist">
+                                    <ul class="nav nav-tabs" id="pills-tab" role="tablist">
+                                        <li><button  class="active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#tb-01">Product Details</button></li>
+                                        <li><button id="tab-two" data-bs-toggle="pill" data-bs-target="#tb-02">Additional imformation</button></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="tb-01">
+                                        <p>{{$products->description}}</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tb-02">
+                                        <p>{{$products->description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+
+                </div> <!-- end of container -->
+            </section>
+            <!-- end of shop-single-section -->
+
 
         </main>
 
@@ -676,65 +517,24 @@
             </div>
         </footer>
         <!-- footer end -->
-
-        <!-- start newsletter-popup-area-section -->
-        <section class="newsletter-popup-area-section">
-            <div class="newsletter-popup-area">
-                <div class="newsletter-popup-ineer">
-                    <button class="btn newsletter-close-btn"><i class="fal fa-times"></i></button>
-                    <div class="img-holder">
-                        <img src="assets/img/bg/newsletter.jpg" alt="">
-                    </div>
-                    <div class="details">
-                        <h4>Get 45% discount shipped to your inbox</h4>
-                        <p>Subscribe to the radios eCommerce newsletter to receive timely updates to your favorite products</p>
-                        <form>
-                            <div>
-                                <input type="email" placeholder="Enter your email" />
-                                <button type="submit">Subscribe</button>
-                            </div>
-                            <div>
-                                <label class="checkbox-holder"> Don't show this popup again!
-                                    <input type="checkbox" class="show-message">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end newsletter-popup-area-section -->
-
-
-        <!-- start cookies-area -->
-        <div class="cookies-area">
-            <p> This website uses cookies to improve your experience. By using this website you agree to our <a href="#">Data Protection Policy</a>. </p>
-            <a href="#" class="read-more">Read more</a>
-            <div>
-                <button class="cookie-btn">Accept</button>
-            </div>
-        </div>
-        <!-- end cookies-area -->
-
-
     </div>
 
     <!-- jquery include -->
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/backToTop.js"></script>
-    <script src="assets/js/uikit.min.js"></script>
-    <script src="assets/js/resize-sensor.min.js"></script>
-    <script src="assets/js/theia-sticky-sidebar.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/jqueryui.js"></script>
-    <script src="assets/js/touchspin.js"></script>
-    <script src="assets/js/countdown.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    {{-- <script src="{{asset('')}}"></script> --}}
+    <script src="{{ asset("assets/js/jquery-3.5.1.min.js") }}"></script>
+    <script src="{{ asset("assets/js/bootstrap.bundle.min.js") }}"></script>
+    <script src="{{ asset("assets/js/slick.js") }}"></script>
+    <script src="{{ asset("assets/js/backToTop.js") }}"></script>
+    <script src="{{ asset("assets/js/uikit.min.js") }}"></script>
+    <script src="{{ asset("assets/js/resize-sensor.min.js") }}"></script>
+    <script src="{{ asset("assets/js/theia-sticky-sidebar.min.js") }}"></script>
+    <script src="{{ asset("assets/js/wow.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jqueryui.js") }}"></script>
+    <script src="{{ asset("assets/js/touchspin.js") }}"></script>
+    <script src="{{ asset("assets/js/countdown.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.magnific-popup.min.js") }}"></script>
+    <script src="{{ asset("assets/js/metisMenu.min.js") }}"></script>
+    <script src="{{ asset("assets/js/main.js") }}"></script>
 </body>
 
 </html>

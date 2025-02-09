@@ -270,15 +270,13 @@
                     <li class="dropdown">
                         <a href="#">Shop</a>
                         <ul class="sub-menu">
-                            <li><a href="{{Route('shop')}}">Shop Default</a></li>
-                            <li><a href="{{Route('shop_left_sidebar')}}">Shop Left Sidebar</a></li>
-                            <li><a href="{{Route('shop_single')}}">Shop Single</a></li>
+                            <li><a href="{{Route('shop')}}">view all product</a></li>
                             <li><a href="{{Route('cart')}}">Shop Cart</a></li>
                             <li><a href="{{Route('checkout')}}">Shop Checkout</a></li>
                             <li><a href="{{Route('account')}}">Account</a></li>
                         </ul>
                     </li>
-                    <li><a href="shop.html">Accesories</a></li>
+                    <li><a href="{{Route('shop')}}">Accesories</a></li>
                     <li class="dropdown">
                         <a href="#!">Blog</a>
                         <ul class="sub-menu">
