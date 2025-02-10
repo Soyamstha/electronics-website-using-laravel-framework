@@ -33,6 +33,10 @@ class frontendcontroller extends Controller
     {
         return view('news_single');
     }
+    function contact()
+    {
+        return view('contact');
+    }
     function news()
     {
         return view('news');
@@ -86,6 +90,13 @@ class frontendcontroller extends Controller
     {
         $order_items=orderitem::where("order_id",$id)->get();
         return view('order_detail',compact('order_items'));
+    }
+    function order_status($id)
+    {
+        $order=order::find($id);
+        $order->status="completed";
+        $order->update();
+        return redirect()->back();
     }
     function update(Request $request,$id)
     {

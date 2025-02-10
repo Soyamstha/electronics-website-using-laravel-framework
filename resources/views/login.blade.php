@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 </head>
+
 <body>
+
     <div class="body_wrap">
 
         {{-- <!-- preloder start  -->
@@ -57,7 +59,7 @@
                         </ul>
                         <div class="header__top-right ul_li mt-10">
                             <div class="date">
-                                <i class="fal fa-calendar-alt"></i> Friday, July 27, 2020
+                                <i class="fal fa-calendar-alt"></i> Sunday, February 2, 2025
                             </div>
                             <div class="header__social ml-25">
                                 <a href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -102,9 +104,7 @@
                             <ul>
                                 <li><a href="#!" class="lang-btn">USD <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">BDT</a></li>
-                                        <li><a href="#">EUR</a></li>
+                                        <li><a href="#"></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -114,8 +114,6 @@
                                 <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="">English <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
                                         <li><a href="#">English</a></li>
-                                        <li><a href="#">Arabic</a></li>
-                                        <li><a href="#">Bangla</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -159,12 +157,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="thm-btn" href="account.html">
-                                <span class="btn-wrap">
-                                    <span>Login / Sign Up</span>
-                                    <span>Login / Sign Up</span>
-                                </span>
-                            </a>
+                                <a class="btn btn-warning" href="{{Route('login')}}" role="button">login/signin</a>
                         </div>
                     </div>
                 </div>
@@ -254,38 +247,37 @@
             <!-- sidebar-info end -->
 
             <!-- side-mobile-menu start -->
-            <ul id="mobile-menu-active">
-                <li class="dropdown"><a href="{{Route('index')}}">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{Route('index')}}">Home </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Shop</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{Route('shop')}}">view all product</a></li>
-                        <li><a href="{{Route('cart')}}">Shop Cart</a></li>
-                        <li><a href="{{Route('checkout')}}">Shop Checkout</a></li>
-                        <li><a href="{{Route('account')}}">Account</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{Route('shop')}}">Accesories</a></li>
-                <li class="dropdown">
-                    <a href="#!">Blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{Route('news')}}">Blog</a></li>
-                        <li><a href="{{Route('news_single')}}">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#!">Pages</a>
-                    <ul class="submenu">
-                        <li><a href="{{Route('about')}}">About Us</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{Route('contact')}}">Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="side-mobile-menu">
+                <div class="header-mobile-search">
+                    <form role="search" method="get" action="#">
+                        <input type="text" placeholder="Search Keywords">
+                        <button type="submit"><i class="ti-search"></i></button>
+                    </form>
+                </div>
+                <ul id="mobile-menu-active">
+                    <li class="dropdown"><a href="{{Route('index')}}">Home</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{Route('index')}}">Home </a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{Route('shop')}}">view all product</a></li>
+                            <li><a href="{{Route('cart')}}">Shop Cart</a></li>
+                            <li><a href="{{Route('checkout')}}">Shop Checkout</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{Route('shop')}}">Accesories</a></li>
+                    <li class="dropdown">
+                        <a href="#!">Pages</a>
+                        <ul class="submenu">
+                            <li><a href="{{Route('about')}}">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{Route('contact')}}">Contact</a></li>
+                </ul>
+            </nav>
             <!-- side-mobile-menu end -->
         </aside>
         <div class="body-overlay"></div>

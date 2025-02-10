@@ -11,32 +11,32 @@
 
     <title>Radios - Electronics Store WooCommerce Template</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon"/>
+    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" type="images/x-icon"/>
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/uikit.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/uikit.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 </head>
 
 <body>
 
     <div class="body_wrap">
 
-        <!-- preloder start  -->
+        {{-- <!-- preloder start  -->
         <div class="preloder_part">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
             </div>
         </div>
-        <!-- preloder end  -->
+        <!-- preloder end  --> --}}
 
         <!-- back to top start -->
         <div class="progress-wrap">
@@ -59,7 +59,7 @@
                         </ul>
                         <div class="header__top-right ul_li mt-10">
                             <div class="date">
-                                <i class="fal fa-calendar-alt"></i> Friday, July 27, 2020
+                                <i class="fal fa-calendar-alt"></i> Sunday, February 2, 2025
                             </div>
                             <div class="header__social ml-25">
                                 <a href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -80,33 +80,31 @@
                         </a>
                     </div>
                     <form class="header__search-box" action="#">
-                        <div class="select-box">
-                            <select id="category" name="category">
-                                <option value="">All Categories</option>
-                                <option value="4">Summer collections</option>
-                                <option value="5">Breakfast & Dairy</option>
-                                <option value="6">Beverage & Drinks</option>
-                                <option value="7">Cocolate Box</option>
-                                <option value="8">Dried Food Corner</option>
-                                <option value="9">Frozen Foods</option>
-                                <option value="10">Baby Food Corner</option>
-                                <option value="11">Milk & Juices</option>
-                                <option value="12">Organic & Snacks</option>
-                            </select>
-                        </div>
-                        <input type="text" name="search" id="search" placeholder="Search For Products"
-                            required />
-                        <button type="submit"><i class="far fa-search"></i>
-                        </button>
-                    </form>
+						<div class="select-box">
+							<select id="category" name="category">
+								<option value="">All Categories</option>
+								<option value="4">Summer collections</option>
+								<option value="5">Breakfast & Dairy</option>
+								<option value="6">Beverage & Drinks</option>
+								<option value="7">Cocolate Box</option>
+								<option value="8">Dried Food Corner</option>
+								<option value="9">Frozen Foods</option>
+								<option value="10">Baby Food Corner</option>
+								<option value="11">Milk & Juices</option>
+								<option value="12">Organic & Snacks</option>
+							</select>
+						</div>
+						<input type="text" name="search" id="search" placeholder="Search For Products"
+							required />
+						<button type="submit"><i class="far fa-search"></i>
+						</button>
+					</form>
                     <div class="header__lang ul_li">
                         <div class="header__language mr-15">
                             <ul>
                                 <li><a href="#!" class="lang-btn">USD <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">BDT</a></li> 
-                                        <li><a href="#">EUR</a></li> 
+                                        <li><a href="#"></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -116,8 +114,6 @@
                                 <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="">English <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
                                         <li><a href="#">English</a></li>
-                                        <li><a href="#">Arabic</a></li> 
-                                        <li><a href="#">Bangla</a></li> 
                                     </ul>
                                 </li>
                             </ul>
@@ -161,12 +157,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="thm-btn" href="account.html">
-                                <span class="btn-wrap">
-                                    <span>Login / Sign Up</span>
-                                    <span>Login / Sign Up</span>
-                                </span>
-                            </a>
+                                <a class="btn btn-warning" href="{{Route('login')}}" role="button">login/signin</a>
                         </div>
                     </div>
                 </div>
@@ -174,8 +165,8 @@
         </header>
         <!-- header end -->
 
-        <!-- slide-bar start -->
-        <aside class="slide-bar">
+         <!-- slide-bar start -->
+         <aside class="slide-bar">
             <div class="close-mobile-menu">
                 <a href="javascript:void(0);"><i class="fal fa-times"></i></a>
             </div>
@@ -264,50 +255,35 @@
                     </form>
                 </div>
                 <ul id="mobile-menu-active">
-                    <li class="dropdown"><a href="index.html">Home</a>
+                    <li class="dropdown"><a href="{{Route('index')}}">Home</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Home One</a></li>
-                            <li><a href="home-2.html">Home Two</a></li>
-                            <li><a href="home-3.html">Home Three</a></li>
+                            <li><a href="{{Route('index')}}">Home </a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Shop</a>
                         <ul class="sub-menu">
-                            <li><a href="shop.html">Shop Default</a></li>
-                            <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="cart.html">Shop Cart</a></li>
-                            <li><a href="checkout.html">Shop Checkout</a></li>
-                            <li><a href="account.html">Account</a></li>
+                            <li><a href="{{Route('shop')}}">view all product</a></li>
+                            <li><a href="{{Route('cart')}}">Shop Cart</a></li>
+                            <li><a href="{{Route('checkout')}}">Shop Checkout</a></li>
                         </ul>
                     </li>
-                    <li><a href="shop.html">Accesories</a></li>
-                    <li class="dropdown">
-                        <a href="#!">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="news.html">Blog</a></li>
-                            <li><a href="news-single.html">Blog Details</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{Route('shop')}}">Accesories</a></li>
                     <li class="dropdown">
                         <a href="#!">Pages</a>
                         <ul class="submenu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="about.html">Account</a></li>
-                            <li><a href="404.html">404</a></li>
+                            <li><a href="{{Route('about')}}">About Us</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{Route('contact')}}">Contact</a></li>
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
         </aside>
         <div class="body-overlay"></div>
         <!-- slide-bar end -->
-
         <main>
-            
+
             <!-- breadcrumb start -->
             <section class="breadcrumb-area">
                 <div class="container">
@@ -335,7 +311,7 @@
                                 <div class="content">
                                     <h3>Mail address</h3>
                                     <a href="mailto:radios.info@gmail.com">radios.info@gmail.com</a>
-                                    <a href="tel:998757478492">+998757478492</a>
+                                    <a href="tel:998757478492">+977-9841736211</a>
                                 </div>
                             </div>
                         </div>
@@ -344,7 +320,7 @@
                                 <span class="icon"><img src="assets/img/icon/location.svg" alt=""></span>
                                 <div class="content">
                                     <h3>Office Location</h3>
-                                    <p>4517 Washington Ave. Manch <br> ester, Kentucky 39495</p>
+                                    <p>Madhapur thimi,bhatakpur <br> Nepal</p>
                                 </div>
                             </div>
                         </div>
@@ -353,8 +329,7 @@
                                 <span class="icon"><img src="assets/img/icon/call-2.svg" alt=""></span>
                                 <div class="content">
                                     <h3>Phone Number</h3>
-                                    <a href="tel:404555012834">+405 - 555 - 0128 - 34</a>
-                                    <a href="tel:404555012863">+405 - 555 - 0128 - 63</a>
+                                    <a href="tel:404555012834">+977-9841736211</a>
                                 </div>
                             </div>
                         </div>
@@ -373,82 +348,10 @@
             </section>
             <!-- contact info end -->
 
-            <!-- contact start -->
-            <section class="contact pt-90">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5">
-                            <div class="contact-img pos-rel">
-                                <img src="assets/img/contact/img_01.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="contact-from__wrap pl-55">
-                                <form class="contact-from" action="#">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="contact-from__field">
-                                                <input type="text" placeholder="Enter your name*">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="contact-from__field">
-                                                <input type="email" placeholder="Enter your mail*">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="contact-from__field">
-                                                <input type="number" placeholder="Enter your number*">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="contact-from__field">
-                                                <input type="text" placeholder="Weabsite Link*">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="contact-from__field">
-                                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your Massage*"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="contact-from__chekbox">
-                                            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox">
-                                            <label for="checkbox">Save my name, email, and website in this browser for the next time I comment.</label>
-                                        </div>
-                                        <div class="contact-from__btn mt-35">
-                                            <button class="thm-btn thm-btn__2">
-                                                <span class="btn-wrap">
-                                                    <span>Send Messege</span>
-                                                    <span>Send Messege</span>
-                                                </span>
-                                                <i class="far fa-long-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div> 
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- contact end -->
 
             <!-- contact info start -->
             <section class="contact-info-area pt-50 pb-80">
                 <div class="container">
-                    <div class="row mt-none-30">
-                        <div class="col-lg-5 mt-30">
-                            <div class="contact__video pos-rel">
-                                <img src="assets/img/contact/img_02.jpg" alt="">
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i class="fas fa-play"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 mt-30">
-                            <div class="contact__img pos-rel">
-                                <img src="assets/img/contact/img_03.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
                     <div class="row mt-20">
                         <div class="col-xl-8 col-lg-7 mt-30">
                             <div class="contact-info__content">
@@ -500,11 +403,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </section>
             <!-- contact info end -->
-            
+
         </main>
 
         <!-- footer start -->
@@ -556,7 +459,7 @@
                                 <li><a href="#!">Waterproof Headphones</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="footer__widget col-lg-3 col-md-6 mt-40">
                             <h2 class="title">Quick Links</h2>
                             <ul class="quick-links">
@@ -627,12 +530,12 @@
                         </form>
                     </div>
                 </div>
-            </div> 
+            </div>
         </section>
         <!-- end newsletter-popup-area-section -->
 
 
-        <!-- start cookies-area -->    
+        <!-- start cookies-area -->
         <div class="cookies-area">
             <p> This website uses cookies to improve your experience. By using this website you agree to our <a href="#">Data Protection Policy</a>. </p>
             <a href="#" class="read-more">Read more</a>

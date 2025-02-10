@@ -326,7 +326,7 @@
                 <td>{{$data->status}}</td>
                 <td>{{$data->cost}}</td>
                 <td>
-                    <a href="" class="btn btn-success">complete</a>
+                    <a href="{{route('order_status',$data->id)}}" class="btn btn-success">complete</a>
                 </td>
               </tr>
               @endforeach

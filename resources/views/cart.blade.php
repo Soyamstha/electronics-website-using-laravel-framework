@@ -29,14 +29,14 @@
 
     <div class="body_wrap">
 
-        <!-- preloder start  -->
+        {{-- <!-- preloder start  -->
         <div class="preloder_part">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
             </div>
         </div>
-        <!-- preloder end  -->
+        <!-- preloder end  --> --}}
 
         <!-- back to top start -->
         <div class="progress-wrap">
@@ -59,7 +59,7 @@
                         </ul>
                         <div class="header__top-right ul_li mt-10">
                             <div class="date">
-                                <i class="fal fa-calendar-alt"></i> Friday, July 27, 2020
+                                <i class="fal fa-calendar-alt"></i> Sunday, February 2, 2025
                             </div>
                             <div class="header__social ml-25">
                                 <a href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -80,33 +80,31 @@
                         </a>
                     </div>
                     <form class="header__search-box" action="#">
-                        <div class="select-box">
-                            <select id="category" name="category">
-                                <option value="">All Categories</option>
-                                <option value="4">Summer collections</option>
-                                <option value="5">Breakfast & Dairy</option>
-                                <option value="6">Beverage & Drinks</option>
-                                <option value="7">Cocolate Box</option>
-                                <option value="8">Dried Food Corner</option>
-                                <option value="9">Frozen Foods</option>
-                                <option value="10">Baby Food Corner</option>
-                                <option value="11">Milk & Juices</option>
-                                <option value="12">Organic & Snacks</option>
-                            </select>
-                        </div>
-                        <input type="text" name="search" id="search" placeholder="Search For Products"
-                            required />
-                        <button type="submit"><i class="far fa-search"></i>
-                        </button>
-                    </form>
+						<div class="select-box">
+							<select id="category" name="category">
+								<option value="">All Categories</option>
+								<option value="4">Summer collections</option>
+								<option value="5">Breakfast & Dairy</option>
+								<option value="6">Beverage & Drinks</option>
+								<option value="7">Cocolate Box</option>
+								<option value="8">Dried Food Corner</option>
+								<option value="9">Frozen Foods</option>
+								<option value="10">Baby Food Corner</option>
+								<option value="11">Milk & Juices</option>
+								<option value="12">Organic & Snacks</option>
+							</select>
+						</div>
+						<input type="text" name="search" id="search" placeholder="Search For Products"
+							required />
+						<button type="submit"><i class="far fa-search"></i>
+						</button>
+					</form>
                     <div class="header__lang ul_li">
                         <div class="header__language mr-15">
                             <ul>
                                 <li><a href="#!" class="lang-btn">USD <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">BDT</a></li>
-                                        <li><a href="#">EUR</a></li>
+                                        <li><a href="#"></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -116,8 +114,6 @@
                                 <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="">English <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
                                         <li><a href="#">English</a></li>
-                                        <li><a href="#">Arabic</a></li>
-                                        <li><a href="#">Bangla</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -161,12 +157,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="thm-btn" href="account.html">
-                                <span class="btn-wrap">
-                                    <span>Login / Sign Up</span>
-                                    <span>Login / Sign Up</span>
-                                </span>
-                            </a>
+                                <a class="btn btn-warning" href="{{Route('login')}}" role="button">login/signin</a>
                         </div>
                     </div>
                 </div>
@@ -174,8 +165,8 @@
         </header>
         <!-- header end -->
 
-        <!-- slide-bar start -->
-        <aside class="slide-bar">
+         <!-- slide-bar start -->
+         <aside class="slide-bar">
             <div class="close-mobile-menu">
                 <a href="javascript:void(0);"><i class="fal fa-times"></i></a>
             </div>
@@ -264,41 +255,27 @@
                     </form>
                 </div>
                 <ul id="mobile-menu-active">
-                    <li class="dropdown"><a href="index.html">Home</a>
+                    <li class="dropdown"><a href="{{Route('index')}}">Home</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Home One</a></li>
-                            <li><a href="home-2.html">Home Two</a></li>
-                            <li><a href="home-3.html">Home Three</a></li>
+                            <li><a href="{{Route('index')}}">Home </a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Shop</a>
                         <ul class="sub-menu">
-                            <li><a href="shop.html">Shop Default</a></li>
-                            <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="cart.html">Shop Cart</a></li>
-                            <li><a href="checkout.html">Shop Checkout</a></li>
-                            <li><a href="account.html">Account</a></li>
+                            <li><a href="{{Route('shop')}}">view all product</a></li>
+                            <li><a href="{{Route('cart')}}">Shop Cart</a></li>
+                            <li><a href="{{Route('checkout')}}">Shop Checkout</a></li>
                         </ul>
                     </li>
-                    <li><a href="shop.html">Accesories</a></li>
-                    <li class="dropdown">
-                        <a href="#!">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="news.html">Blog</a></li>
-                            <li><a href="news-single.html">Blog Details</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{Route('shop')}}">Accesories</a></li>
                     <li class="dropdown">
                         <a href="#!">Pages</a>
                         <ul class="submenu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="about.html">Account</a></li>
-                            <li><a href="404.html">404</a></li>
+                            <li><a href="{{Route('about')}}">About Us</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{Route('contact')}}">Contact</a></li>
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
