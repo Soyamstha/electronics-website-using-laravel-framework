@@ -296,7 +296,7 @@
                                         <div class="hero__product-wrap">
                                             <div class="hero__product-carousel">
                                                 <div class="hero__product-item">
-                                                    <img src="assets/img/product/img_52.png" alt="">
+                                                    <img src="https://itti.com.np/_next/image?url=https%3A%2F%2Fadmin.itti.com.np%2Fstorage%2Fproduct%2Facer-aspire-5-15-2024-14th-gen-8gb-core-7-price-nepal%2Fthumb%2F216449d4-17e9-4761-ac09-7b9595e06b54.webp&w=384&q=75" alt="">
                                                 </div>
                                             </div>
                                             <span class="hero__product-offer">
@@ -309,16 +309,16 @@
                                 <div class="col-lg-5 mt-30">
                                     <div class="hero__content">
                                         <span class="subtitle">100% Best Product</span>
-                                        <h2 class="title">Waterma Watch <br> Beats Studio</h2>
+                                        <h2 class="title">Acer Aspire 5 15 2024</h2>
                                         <p>Widescreen 4k ultra Laptop</p>
-                                        <h3 class="price">$ 1800.99 / <span>$2860</span></h3>
+                                        <h3 class="price">RS 105000 / <span>RS 110000</span></h3>
                                         <div class="mxw_343 mb-20">
                                             <div class="product__progress progress h-16 color-primary">
                                                 <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <div class="ul_li_between mb-6">
                                                 <span class="product__available">Available: <span>334</span></span>
-                                                <span class="product__available">Stock: <span>180</span></span>
+                                                <span class="product__available">Stock: <span>10</span></span>
                                             </div>
                                         </div>
                                         <a class="hero__btn" href="#!">Shop Now <i class="far fa-long-arrow-right"></i></a>
@@ -333,7 +333,7 @@
                                     <div class="hot-deal__item text-center">
                                         <div class="thumb">
                                             <a href="#!">
-                                                <img src="assets/img/product/img_55.png" alt="">
+                                                <img src="https://itti.com.np/_next/image?url=https%3A%2F%2Fadmin.itti.com.np%2Fstorage%2Fproduct%2Fasus-rog-zephyrus-g16-2024-price-nepal%2Fthumb%2Ff54b3073-5040-4009-9789-b8578d510364.webp&w=256&q=75" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -344,15 +344,15 @@
                                                 <li><i class="far fa-star"></i></li>
                                                 <li><i class="far fa-star"></i></li>
                                             </ul>
-                                            <h2 class="title mb-15"><a href="#!">Asus 2022 Vivobook</a></h2>
-                                            <h4 class="product__price mb-20"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                            <h2 class="title mb-15"><a href="#!">Asus ROG Zephyrus</a></h2>
+                                            <h4 class="product__price mb-20"><span class="new">RS 355000</span><span class="old">RS 369900</span></h4>
                                             <div class="mxw_216 m-auto">
                                                 <div class="product__progress progress mb-6 h-8 color-primary">
                                                     <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <div class="ul_li_between">
-                                                    <span class="product__available">Available: <span>334</span></span>
-                                                    <span class="product__available">Sold: <span>180</span></span>
+                                                    <span class="product__available">Available: <span>10</span></span>
+                                                    <span class="product__available">Sold: <span>5</span></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -360,7 +360,7 @@
                                     <div class="hot-deal__item text-center">
                                         <div class="thumb">
                                             <a href="#!">
-                                                <img src="assets/img/product/img_55.png" alt="">
+                                                <img src="https://itti.com.np/_next/image?url=https%3A%2F%2Fadmin.itti.com.np%2Fstorage%2Fproduct%2Flenovo-legion-go-8apu1-price-nepal%2Fthumb%2Fba72b10b-85c8-4307-9525-9e63608d674e.webp&w=384&q=75" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -371,42 +371,15 @@
                                                 <li><i class="far fa-star"></i></li>
                                                 <li><i class="far fa-star"></i></li>
                                             </ul>
-                                            <h2 class="title mb-15"><a href="#!">Asus 2022 Vivobook</a></h2>
-                                            <h4 class="product__price mb-20"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                            <h2 class="title mb-15"><a href="#!">Lenovo Legion Go 8APU1 AMD Ryzen</a></h2>
+                                            <h4 class="product__price mb-20"><span class="new">Rs 110000</span><span class="old">Rs 135000</span></h4>
                                             <div class="mxw_216 m-auto">
                                                 <div class="product__progress progress mb-6 h-8 color-primary">
                                                     <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <div class="ul_li_between">
-                                                    <span class="product__available">Available: <span>334</span></span>
-                                                    <span class="product__available">Sold: <span>180</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hot-deal__item text-center">
-                                        <div class="thumb">
-                                            <a href="#!">
-                                                <img src="assets/img/product/img_55.png" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <ul class="rating-star ul_li_center mr-10">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="far fa-star"></i></li>
-                                                <li><i class="far fa-star"></i></li>
-                                            </ul>
-                                            <h2 class="title mb-15"><a href="#!">Asus 2022 Vivobook</a></h2>
-                                            <h4 class="product__price mb-20"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
-                                            <div class="mxw_216 m-auto">
-                                                <div class="product__progress progress mb-6 h-8 color-primary">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <div class="ul_li_between">
-                                                    <span class="product__available">Available: <span>334</span></span>
-                                                    <span class="product__available">Sold: <span>180</span></span>
+                                                    <span class="product__available">Available: <span>5</span></span>
+                                                    <span class="product__available">Sold: <span>10</span></span>
                                                 </div>
                                             </div>
                                         </div>

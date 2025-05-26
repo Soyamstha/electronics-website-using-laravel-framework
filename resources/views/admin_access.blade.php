@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css">
 </head>
 <body>
     <div class="body_wrap">
@@ -293,9 +294,9 @@
     <div>
         <h1> welcome to admin access</h1>
     </div>
-    <div>
-        <table class="table table-bordered">
-            <thead>
+   <div>
+    <table class="table table-bordered" id="orders">
+        <thead>
               <tr>
                 <th scope="col">id</th>
                 <th scope="col">First name</th>
@@ -307,34 +308,16 @@
                 <th scope="col">city</th>
                 <th scope="col">status</th>
                 <th scope="col">cost</th>
-                <th scope="col">action</th>
               </tr>
-            </thead>
-            <tbody>
-                @foreach($orders as $data)
-              <tr>
-                <td>{{$data->id}}</td>
-                <td>
-                    <a href="{{route('order_detail',$data->id)}}">{{$data->first_name}}</a>
-                </td>
-                <td>{{$data->last_name}}</td>
-                <td>{{$data->email}}</td>
-                <td>{{$data->phone}}</td>
-                <td>{{$data->address}}</td>
-                <td>{{$data->address2}}</td>
-                <td>{{$data->city}}</td>
-                <td>{{$data->status}}</td>
-                <td>{{$data->cost}}</td>
-                <td>
-                    <a href="{{route('order_status',$data->id)}}" class="btn btn-success">complete</a>
-                </td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-    </div>
+        </thead>
+    </table>
+   </div>
 <!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
     <script src="{{ asset("assets/js/jquery-3.5.1.min.js") }}"></script>
     <script src="{{ asset("assets/js/bootstrap.bundle.min.js") }}"></script>
     <script src="{{ asset("assets/js/slick.js") }}"></script>
@@ -349,5 +332,25 @@
     <script src="{{ asset("assets/js/jquery.magnific-popup.min.js") }}"></script>
     <script src="{{ asset("assets/js/metisMenu.min.js") }}"></script>
     <script src="{{ asset("assets/js/main.js") }}"></script>
+    <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#orders').DataTable( {
+            ajax: "{{url('getOrders')}}",
+            columns: [
+                { data: 'id' },
+                { data: 'first_name' },
+                { data: 'last_name' },
+                { data: 'email' },
+                { data: 'phone' },
+                { data: 'address' },
+                { data: 'address2' },
+                { data: 'city' },
+                { data: 'status' },
+                { data: 'cost' }
+            ]
+            } );
+        })
+    </script>
 </body>
 </html>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\product;
 use App\Models\order;
 use App\Models\orderitem;
+use Yajra\DataTables\DataTables;
 class frontendcontroller extends Controller
 {
     function index()
@@ -72,6 +73,15 @@ class frontendcontroller extends Controller
         $orders=order::all();
         return view('admin_access',compact('orders'));
     }
+    public function getOrders(Request $request)
+{
+    if ($request->ajax()) {
+        $orders = Order::select(['id', 'first_name', 'last_name', 'email', 'phone', 'address', 'address2', 'city', 'status', 'cost']);
+        return DataTables::of($orders)->make(true);
+    }
+
+    return view('admin_access');
+}
     function add_product()
     {
         return view('add_product');

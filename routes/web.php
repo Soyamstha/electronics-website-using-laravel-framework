@@ -25,6 +25,7 @@ Route::get('/edit/{id}',[frontendcontroller::class,'edit'])->name('edit');
 Route::get('/delete/{id}',[frontendcontroller::class,'delete'])->name('delete');
 Route::get('/order_detail/{id}',[frontendcontroller::class,'order_detail'])->name('order_detail');
 Route::get('/order_status/{id}',[frontendcontroller::class,'order_status'])->name('order_status');
+Route::get('/getOrders', [frontendcontroller::class,'getOrders']);
 
 Route::POST('/login_process',[backendcontroller::class,'login_process'])->name('login_process');
 Route::POST('/register',[backendcontroller::class,'register'])->name('register');
