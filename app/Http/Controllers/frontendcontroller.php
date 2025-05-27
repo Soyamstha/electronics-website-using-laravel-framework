@@ -74,14 +74,46 @@ class frontendcontroller extends Controller
         return view('admin_access',compact('orders'));
     }
     public function getOrders(Request $request)
-{
+    {
     if ($request->ajax()) {
         $orders = Order::select(['id', 'first_name', 'last_name', 'email', 'phone', 'address', 'address2', 'city', 'status', 'cost']);
         return DataTables::of($orders)->make(true);
     }
-
     return view('admin_access');
-}
+    }
+    function editorders(Request $request)
+    {
+        $validated = $request->validate([
+        'id' => 'required|exists:orders,id',
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'phone' => 'required|string|max:20',
+        'address' => 'required|string|max:255',
+        ]);
+
+        Order::where('id', $validated['id'])->update([
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'address' => $validated['address'],
+        ]);
+        return response()->json([
+        'success' => true,
+        'message' => 'Order updated successfully.'
+        ]);
+
+    }
+    function deleteorder(Request $request, $id)
+    {
+        $order = Order::findOrFail($id);
+        $order->delete();
+        return response()->json([
+            'success' => true,
+            'message' => 'Order deleted successfully.'
+    ]);
+    }
     function add_product()
     {
         return view('add_product');

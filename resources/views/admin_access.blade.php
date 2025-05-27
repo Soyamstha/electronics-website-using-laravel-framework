@@ -11,20 +11,22 @@
 
     <title>Radios - Electronics Store WooCommerce Template</title>
 
-    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" type="images/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="images/x-icon" />
 
     <!-- css include -->
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/metisMenu.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/uikit.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/metisMenu.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/uikit.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
+
 <body>
     <div class="body_wrap">
 
@@ -40,7 +42,7 @@
         <!-- back to top start -->
         <div class="progress-wrap">
             <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
         </div>
         <!-- back to top end -->
@@ -79,25 +81,25 @@
                         </a>
                     </div>
                     <form class="header__search-box" action="#">
-						<div class="select-box">
-							<select id="category" name="category">
-								<option value="">All Categories</option>
-								<option value="4">Summer collections</option>
-								<option value="5">Breakfast & Dairy</option>
-								<option value="6">Beverage & Drinks</option>
-								<option value="7">Cocolate Box</option>
-								<option value="8">Dried Food Corner</option>
-								<option value="9">Frozen Foods</option>
-								<option value="10">Baby Food Corner</option>
-								<option value="11">Milk & Juices</option>
-								<option value="12">Organic & Snacks</option>
-							</select>
-						</div>
-						<input type="text" name="search" id="search" placeholder="Search For Products"
-							required />
-						<button type="submit"><i class="far fa-search"></i>
-						</button>
-					</form>
+                        <div class="select-box">
+                            <select id="category" name="category">
+                                <option value="">All Categories</option>
+                                <option value="4">Summer collections</option>
+                                <option value="5">Breakfast & Dairy</option>
+                                <option value="6">Beverage & Drinks</option>
+                                <option value="7">Cocolate Box</option>
+                                <option value="8">Dried Food Corner</option>
+                                <option value="9">Frozen Foods</option>
+                                <option value="10">Baby Food Corner</option>
+                                <option value="11">Milk & Juices</option>
+                                <option value="12">Organic & Snacks</option>
+                            </select>
+                        </div>
+                        <input type="text" name="search" id="search" placeholder="Search For Products"
+                            required />
+                        <button type="submit"><i class="far fa-search"></i>
+                        </button>
+                    </form>
                     <div class="header__lang ul_li">
                         <div class="header__language mr-15">
                             <ul>
@@ -112,7 +114,8 @@
                         </div>
                         <div class="header__language">
                             <ul>
-                                <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="">English <i class="far fa-chevron-down"></i></a>
+                                <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png"
+                                            alt="">English <i class="far fa-chevron-down"></i></a>
                                     <ul class="lang_sub_list">
                                         <li><a href="#">English</a></li>
                                         <li><a href="#">Arabic</a></li>
@@ -142,7 +145,7 @@
             <div class="header__cat-wrap" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
                 <div class="container">
                     <div class="header__wrap ul_li_between">
-                        <div class="header__cat ul_li" >
+                        <div class="header__cat ul_li">
                             <div class="hamburger_menu">
                                 <a href="javascript:void(0);" class="active">
                                     <div class="icon bar">
@@ -151,16 +154,22 @@
                                 </a>
                             </div>
                             <ul class="category ul_li">
-                                <li><a href="#!"><span><img src="assets/img/icon/hc_01.svg" alt=""></span>Laptops & Computers</a></li>
-                                <li><a href="#!"><span><img src="assets/img/icon/hc_02.svg" alt=""></span>CC Tv & Camera</a></li>
-                                <li><a href="#!"><span><img src="assets/img/icon/hc_03.svg" alt=""></span>Home Equipment</a></li>
-                                <li><a href="#!"><span><img src="assets/img/icon/hc_04.svg" alt=""></span>Tv & Audios</a></li>
-                                <li><a href="#!"><span><img src="assets/img/icon/hc_05.svg" alt=""></span>Printers & Ink</a></li>
-                                <li><a href="#!"><span><img src="assets/img/icon/hc_06.svg" alt=""></span>Gaming & Fun</a></li>
+                                <li><a href="#!"><span><img src="assets/img/icon/hc_01.svg"
+                                                alt=""></span>Laptops & Computers</a></li>
+                                <li><a href="#!"><span><img src="assets/img/icon/hc_02.svg"
+                                                alt=""></span>CC Tv & Camera</a></li>
+                                <li><a href="#!"><span><img src="assets/img/icon/hc_03.svg"
+                                                alt=""></span>Home Equipment</a></li>
+                                <li><a href="#!"><span><img src="assets/img/icon/hc_04.svg"
+                                                alt=""></span>Tv & Audios</a></li>
+                                <li><a href="#!"><span><img src="assets/img/icon/hc_05.svg"
+                                                alt=""></span>Printers & Ink</a></li>
+                                <li><a href="#!"><span><img src="assets/img/icon/hc_06.svg"
+                                                alt=""></span>Gaming & Fun</a></li>
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="btn btn-warning" href="{{Route('admin_logout')}}" role="button">Logout</a>
+                            <a class="btn btn-warning" href="{{ Route('admin_logout') }}" role="button">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -168,8 +177,8 @@
         </header>
         <!-- header end -->
 
-         <!-- slide-bar start -->
-         <aside class="slide-bar">
+        <!-- slide-bar start -->
+        <aside class="slide-bar">
             <div class="close-mobile-menu">
                 <a href="javascript:void(0);"><i class="fal fa-times"></i></a>
             </div>
@@ -234,17 +243,17 @@
                 </div>
                 <ul class="btns_group ul_li">
                     <li><a href="cart.html" class="thm-btn">
-                        <span class="btn-wrap">
-                            <span>View Cart</span>
-                            <span>View Cart</span>
-                        </span>
-                    </a></li>
+                            <span class="btn-wrap">
+                                <span>View Cart</span>
+                                <span>View Cart</span>
+                            </span>
+                        </a></li>
                     <li><a href="checkout.html" class="thm-btn thm-btn__black">
-                        <span class="btn-wrap">
-                            <span>Checkout</span>
-                            <span>Checkout</span>
-                        </span>
-                    </a></li>
+                            <span class="btn-wrap">
+                                <span>Checkout</span>
+                                <span>Checkout</span>
+                            </span>
+                        </a></li>
                 </ul>
             </div>
             <!-- sidebar-info end -->
@@ -258,32 +267,32 @@
                     </form>
                 </div>
                 <ul id="mobile-menu-active">
-                    <li class="dropdown"><a href="{{Route('admin_access')}}">Home</a>
+                    <li class="dropdown"><a href="{{ Route('admin_access') }}">Home</a>
                         <ul class="sub-menu">
-                            <li><a href="{{Route('admin_access')}}">Home </a></li>
+                            <li><a href="{{ Route('admin_access') }}">Home </a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Admin access</a>
                         <ul class="sub-menu">
-                            <li><a href="{{Route('add_product')}}">Add product</a></li>
-                            <li><a href="{{Route('view')}}">view product</a></li>
+                            <li><a href="{{ Route('add_product') }}">Add product</a></li>
+                            <li><a href="{{ Route('view') }}">view product</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#!">Blog</a>
                         <ul class="sub-menu">
-                            <li><a href="{{Route('news')}}">Blog</a></li>
-                            <li><a href="{{Route('news_single')}}">Blog Details</a></li>
+                            <li><a href="{{ Route('news') }}">Blog</a></li>
+                            <li><a href="{{ Route('news_single') }}">Blog Details</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#!">Pages</a>
                         <ul class="submenu">
-                            <li><a href="{{Route('about')}}">About Us</a></li>
+                            <li><a href="{{ Route('about') }}">About Us</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{Route('contact')}}">Contact</a></li>
+                    <li><a href="{{ Route('contact') }}">Contact</a></li>
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
@@ -294,66 +303,226 @@
     <div>
         <h1> welcome to admin access</h1>
     </div>
-   <div>
-    <table class="table table-bordered" id="orders">
-        <thead>
-              <tr>
-                <th scope="col">id</th>
-                <th scope="col">First name</th>
-                <th scope="col">Last name</th>
-                <th scope="col">email</th>
-                <th scope="col">phone no</th>
-                <th scope="col">address1</th>
-                <th scope="col">address2</th>
-                <th scope="col">city</th>
-                <th scope="col">status</th>
-                <th scope="col">cost</th>
-              </tr>
-        </thead>
-    </table>
-   </div>
-   <div>
+    <div>
+        <table class="table table-bordered" id="orders">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">phone no</th>
+                    <th scope="col">address1</th>
+                    <th scope="col">address2</th>
+                    <th scope="col">city</th>
+                    <th scope="col">status</th>
+                    <th scope="col">cost</th>
+                    <th scope="col">edit</th>
+                    <th scope="col">delete</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
-   </div>
-<!-- jquery include -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateform" method="POST" action="{{ route('edit.orders') }}">
+
+                        @csrf
+                        <input type="hidden" name="id" id="order_id">
+                        <div>
+                            <label>First name</label>
+                            <input type="text" class="form-control" id="first_name" name="first_name">
+                        </div>
+                        <div>
+                            <label>last name</label>
+                            <input type="text" class="form-control" name="last_name" id="last_name">
+                        </div>
+                        <div>
+                            <label>email</label>
+                            <input type="text" class="form-control" name="email" id="email">
+                        </div>
+                        <div>
+                            <label>phone no</label>
+                            <input type="text" class="form-control" name="phone" id="phone">
+                        </div>
+                        <div>
+                            <label>address</label>
+                            <input type="text" class="form-control" name="address" id="address">
+                        </div>
+                        <div>
+                            <label>address1</label>
+                            <input type="text" class="form-control" name="address2" id="address2">
+                        </div>
+                        <div>
+                            <label>city</label>
+                            <input type="text" class="form-control" name="city" id="city">
+                        </div>
+                        <div>
+                            <label>status</label>
+                            <input type="text" class="form-control" name="status" id="status">
+                        </div>
+                        <div>
+                            <label>cost</label>
+                            <input type="text" class="form-control" name="cost" id="cost">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- jquery include -->
     {{-- <script src="{{asset('')}}"></script> --}}
-    <script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-    <script src="{{ asset("assets/js/jquery-3.5.1.min.js") }}"></script>
-    <script src="{{ asset("assets/js/bootstrap.bundle.min.js") }}"></script>
-    <script src="{{ asset("assets/js/slick.js") }}"></script>
-    <script src="{{ asset("assets/js/backToTop.js") }}"></script>
-    <script src="{{ asset("assets/js/uikit.min.js") }}"></script>
-    <script src="{{ asset("assets/js/resize-sensor.min.js") }}"></script>
-    <script src="{{ asset("assets/js/theia-sticky-sidebar.min.js") }}"></script>
-    <script src="{{ asset("assets/js/wow.min.js") }}"></script>
-    <script src="{{ asset("assets/js/jqueryui.js") }}"></script>
-    <script src="{{ asset("assets/js/touchspin.js") }}"></script>
-    <script src="{{ asset("assets/js/countdown.js") }}"></script>
-    <script src="{{ asset("assets/js/jquery.magnific-popup.min.js") }}"></script>
-    <script src="{{ asset("assets/js/metisMenu.min.js") }}"></script>
-    <script src="{{ asset("assets/js/main.js") }}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.js') }}"></script>
+    <script src="{{ asset('assets/js/backToTop.js') }}"></script>
+    <script src="{{ asset('assets/js/uikit.min.js') }}"></script>
+    <script src="{{ asset('assets/js/resize-sensor.min.js') }}"></script>
+    <script src="{{ asset('assets/js/theia-sticky-sidebar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jqueryui.js') }}"></script>
+    <script src="{{ asset('assets/js/touchspin.js') }}"></script>
+    <script src="{{ asset('assets/js/countdown.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
+    <script src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         $(document).ready(function() {
-            var table = $('#orders').DataTable( {
-            ajax: "{{url('getOrders')}}",
-            columns: [
-                { data: 'id' },
-                { data: 'first_name' },
-                { data: 'last_name' },
-                { data: 'email' },
-                { data: 'phone' },
-                { data: 'address' },
-                { data: 'address2' },
-                { data: 'city' },
-                { data: 'status' },
-                { data: 'cost' }
-            ]
-            } );
-        })
+            var table = $('#orders').DataTable({
+                ajax: "{{ url('getOrders') }}",
+                columns: [{
+                        data: 'id'
+                    },
+                    {
+                        data: 'first_name'
+                    },
+                    {
+                        data: 'last_name'
+                    },
+                    {
+                        data: 'email'
+                    },
+                    {
+                        data: 'phone'
+                    },
+                    {
+                        data: 'address'
+                    },
+                    {
+                        data: 'address2'
+                    },
+                    {
+                        data: 'city'
+                    },
+                    {
+                        data: 'status'
+                    },
+                    {
+                        data: 'cost'
+                    },
+                    {
+                        "data": null,
+                        render: function(data, type, row) {
+                            return `<button data-id="${row.id}" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter" id="edit"><i class="fa fa-edit"></i></button>`;
+                        }
+                    },
+                    {
+                        "data": null,
+                        render: function(data, type, row) {
+                            return `<button data-id="${row.id}" class="btn btn-danger" id="delete"><i class="fa fa-trash"></i></button>`;
+                        }
+                    }
+                ],
+
+                initComplete: function(settings, json) {
+
+                    console.log('DataTables has finished its initialisation.');
+                }
+            });
+            $('#orders').on('click', '#edit', function() {
+                var data = table.row($(this).parents('tr')).data();
+                $('#order_id').val(data.id);
+                $('#first_name').val(data.first_name);
+                $('#last_name').val(data.last_name);
+                $('#email').val(data.email);
+                $('#phone').val(data.phone);
+                $('#address').val(data.address);
+                $('#address2').val(data.address2);
+                $('#city').val(data.city);
+                $('#status').val(data.status);
+                $('#cost').val(data.cost);
+            });
+
+            $('#updateform').on('submit', function(e) {
+                e.preventDefault();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                    }
+                });
+                $.ajax({
+                    url: '/edit-orders',
+                    method: 'POST',
+                    data: $('#updateform').serialize(),
+                    success: function(response) {
+                        toastr.success(response.message);
+                        table.ajax.reload();
+                    },
+                    error: function(xhr) {
+                        alert('Error updating order');
+                    }
+                });
+            });
+        });
+        $(document).on('click', '#delete', function() {
+            var id = $(this).data('id');
+            if (confirm('Are you sure you want to delete this order?')) {
+                                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                    }
+                });
+                $.ajax({
+                    url: '/delete-order/' + id,
+                    method: 'DELETE',
+                    success: function(response) {
+                        toastr.success(response.message);
+                        $('#orders').DataTable().ajax.reload();
+                    },
+                    error: function(xhr) {
+                        toastr.error('Error deleting order');
+                    }
+                });
+            }
+        });
     </script>
 </body>
+
 </html>

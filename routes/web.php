@@ -26,6 +26,8 @@ Route::get('/delete/{id}',[frontendcontroller::class,'delete'])->name('delete');
 Route::get('/order_detail/{id}',[frontendcontroller::class,'order_detail'])->name('order_detail');
 Route::get('/order_status/{id}',[frontendcontroller::class,'order_status'])->name('order_status');
 Route::get('/getOrders', [frontendcontroller::class,'getOrders']);
+Route::post('/edit-orders', [frontendcontroller::class, 'editorders'])->name('edit.orders');
+Route::delete('/delete-order/{id}', [frontendcontroller::class, 'deleteorder'])->name('delete.order');
 
 Route::POST('/login_process',[backendcontroller::class,'login_process'])->name('login_process');
 Route::POST('/register',[backendcontroller::class,'register'])->name('register');
@@ -38,3 +40,7 @@ Route::POST('/add_to_cart',[backendcontroller::class,'add_to_cart'])->name('add_
 Route::POST('/add_quantity',[backendcontroller::class,'add_quantity'])->name('add_quantity');
 Route::POST('/remove_item',[backendcontroller::class,'remove_item'])->name('remove_item');
 Route::POST('/place_order',[backendcontroller::class,'place_order'])->name('place_order');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
